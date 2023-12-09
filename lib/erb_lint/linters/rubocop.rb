@@ -122,7 +122,7 @@ module ERBLint
       end
 
       def tempfile_from(filename, content)
-        Tempfile.create(File.basename(filename), Dir.pwd) do |tempfile|
+        Tempfile.create(File.basename(filename)) do |tempfile|
           tempfile.write(content)
           tempfile.rewind
 
